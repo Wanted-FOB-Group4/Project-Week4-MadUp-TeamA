@@ -20,8 +20,8 @@ interface Props {
 
 const IntegratedAdManagement = (props: Props) => {
   const { pickStartDate, pickEndDate } = props
-  const [firstChartName, setFirstChartName] = useState('roas')
-  const [secondChartName, setSecondChartName] = useState('cost')
+  const [firstChartName, setFirstChartName] = useState('광고비')
+  const [secondChartName, setSecondChartName] = useState('노출 수')
   const [data, setData] = useState<IData[]>([])
   const [isThirdSelectOpen, setIsThirdSelectOpen] = useState(false)
 
