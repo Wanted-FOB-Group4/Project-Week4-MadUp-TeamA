@@ -1,9 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import cx from 'classnames'
 
-import styles from './navBar.module.scss'
 import CloseNavBar from './CloseNavBar'
 import OpenNavBar from './OpenNavBar'
+
+import styles from './navBar.module.scss'
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(true)
@@ -26,7 +27,7 @@ const NavBar = () => {
   }, [nav])
 
   const FullNavBar = useMemo(
-    () => (isOpen ? <OpenNavBar setIsOpen={setIsOpen} /> : <CloseNavBar setIsOpen={setIsOpen} />),
+    () => (isOpen ? <OpenNavBar isOpen={isOpen} setIsOpen={setIsOpen} /> : <CloseNavBar setIsOpen={setIsOpen} />),
     [isOpen]
   )
 
